@@ -1,0 +1,4 @@
+package com.votesecure.onlinevoting.model;
+import jakarta.persistence.*;
+@Entity @Table(name="candidates") public class Candidate{@Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;@Column(name="full_name") private String fullName;@Column(name="party_name") private String partyName;private String symbol,manifesto;private boolean active;
+public Long getId(){return id;}public String getFullName(){return fullName;}public void setFullName(String x){fullName=x;}public String getPartyName(){return partyName;}public void setPartyName(String x){partyName=x;}public String getSymbol(){return symbol;}public void setSymbol(String x){symbol=x;}public String getManifesto(){return manifesto;}public void setManifesto(String x){manifesto=x;}public boolean isActive(){return active;}public void setActive(boolean x){active=x;}}

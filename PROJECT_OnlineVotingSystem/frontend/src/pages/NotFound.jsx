@@ -1,0 +1,1 @@
+import {useNavigate} from "react-router-dom"; export default function NotFound(){const n=useNavigate();return <main className="error-page"><b>404</b><h1>Page not found</h1><p>The page you're looking for doesn't exist.</p><button className="primary-btn" onClick={()=>n("/")}>Go Home</button></main>}

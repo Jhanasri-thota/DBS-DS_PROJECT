@@ -1,0 +1,4 @@
+package com.votesecure.onlinevoting.model;
+import jakarta.persistence.*;import java.time.LocalDateTime;
+@Entity @Table(name="votes") public class Vote{@Id @GeneratedValue(strategy=GenerationType.IDENTITY) private Long id;@OneToOne @JoinColumn(name="voter_id",unique=true) private Voter voter;@ManyToOne @JoinColumn(name="candidate_id") private Candidate candidate;@Column(name="voted_at") private LocalDateTime votedAt;@Column(name="receipt_code",unique=true) private String receiptCode;
+public Long getId(){return id;}public Voter getVoter(){return voter;}public void setVoter(Voter x){voter=x;}public Candidate getCandidate(){return candidate;}public void setCandidate(Candidate x){candidate=x;}public LocalDateTime getVotedAt(){return votedAt;}public void setVotedAt(LocalDateTime x){votedAt=x;}public String getReceiptCode(){return receiptCode;}public void setReceiptCode(String x){receiptCode=x;}}
