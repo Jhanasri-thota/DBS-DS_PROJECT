@@ -1,0 +1,3 @@
+package com.votehub.entity;
+import jakarta.persistence.*; import java.time.*;
+@Entity @Table(name="voting_authorizations",uniqueConstraints=@UniqueConstraint(name="uk_election_user",columnNames={"election_id","user_id"})) public class VotingAuthorization { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) public Long id; @ManyToOne(optional=false) @JoinColumn(name="election_id") public Election election; @ManyToOne(optional=false) @JoinColumn(name="user_id") public User user; @Column(name="token_hash",nullable=false,unique=true) public String tokenHash; @Column(nullable=false) public boolean used=false; @Column(name="issued_at",nullable=false) public LocalDateTime issuedAt=LocalDateTime.now(); }

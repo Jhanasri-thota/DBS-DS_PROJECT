@@ -1,0 +1,3 @@
+package com.votehub.entity;
+import jakarta.persistence.*; import java.time.*;
+@Entity @Table(name="otp_verifications") public class OtpVerification { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) public Long id; @ManyToOne(optional=false) @JoinColumn(name="user_id") public User user; @Column(name="otp_hash",nullable=false) public String otpHash; @Column(name="expires_at",nullable=false) public LocalDateTime expiresAt; @Column(nullable=false) public int attempts=0; @Column(nullable=false) public boolean verified=false; @Column(name="created_at",nullable=false) public LocalDateTime createdAt=LocalDateTime.now(); }

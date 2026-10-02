@@ -1,0 +1,3 @@
+package com.votehub.entity;
+import jakarta.persistence.*; import java.time.*;
+@Entity @Table(name="elections") public class Election { @Id @GeneratedValue(strategy=GenerationType.IDENTITY) public Long id; @Column(nullable=false) public String name; @Column(columnDefinition="TEXT") public String description; @Column(name="start_time",nullable=false) public LocalDateTime startTime; @Column(name="end_time",nullable=false) public LocalDateTime endTime; @Enumerated(EnumType.STRING) @Column(nullable=false) public Status status=Status.UPCOMING; @Column(name="min_age",nullable=false) public int minAge=18; @Column(name="results_published",nullable=false) public boolean resultsPublished=false; public enum Status{UPCOMING,ACTIVE,CLOSING_SOON,CLOSED} }

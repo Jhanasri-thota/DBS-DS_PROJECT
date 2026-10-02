@@ -1,0 +1,1 @@
+package com.votehub.repository; import com.votehub.entity.*; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface ElectionRepository extends JpaRepository<Election,Long>{List<Election> findAllByOrderByStartTimeDesc();}
