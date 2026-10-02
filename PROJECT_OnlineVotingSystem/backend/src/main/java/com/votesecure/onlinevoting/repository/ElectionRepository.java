@@ -1,1 +1,0 @@
-package com.votesecure.onlinevoting.repository;import com.votesecure.onlinevoting.model.ElectionSetting;import org.springframework.data.jpa.repository.JpaRepository;public interface ElectionRepository extends JpaRepository<ElectionSetting,Long>{}
