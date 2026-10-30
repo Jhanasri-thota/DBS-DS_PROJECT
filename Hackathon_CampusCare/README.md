@@ -1,287 +1,128 @@
-# 🏫 CampusCare – Campus Complaint & Service Management System
+# 🏫 CampusCare – AI-Powered Campus Complaint & Service Management System
 
 <p align="center">
-  <b>A Smart, Simple and Efficient Campus Complaint Management Platform</b>
-  <br>
-  Making campus services more accessible, transparent and organized.
+  <b>One Platform. Every Campus Concern. Better Campus Life.</b>
+  <br><br>
+  A Full-Stack Web Application developed for CODESPARK Hackathon 2026 – Problem Statement 20.
 </p>
 
 ---
 
-## 📌 About the Project
+## 📌 1. Project Overview
 
-**CampusCare** is a full-stack web application designed to simplify complaint management and improve communication between students, faculty, staff and campus administrators.
+**CampusCare** is an AI-powered Campus Complaint and Service Management System designed to make campus issue reporting, tracking and resolution easier and more efficient.
 
-Students can submit complaints, track their progress and provide feedback. Faculty and staff accounts can be managed through administrator approval, while administrators can assign complaints, manage users and monitor campus service activities.
+The platform provides a centralized digital environment where students and faculty can register complaints related to campus facilities and services. Administrators can manage users, assign complaints to staff members, monitor progress and analyze complaint statistics.
 
-The main objective is to create a centralized platform that makes campus issue reporting faster, easier and more transparent.
+The system also includes an optional AI-supported service that recommends complaint categories, priorities and departments based on the complaint description.
 
-## 🎯 Project Objectives
+Our goal is to improve communication, transparency and accountability in campus maintenance and service management.
 
-* Provide a centralized platform for campus complaints.
-* Make complaint registration and tracking easier.
-* Improve communication between students and campus staff.
-* Enable administrators to manage users and complaints.
-* Maintain organized complaint and feedback records.
-* Improve transparency in campus service management.
+## 🎯 2. Problem Statement
 
-## ✨ Key Features
+Traditional campus complaint management often depends on manual reporting, paperwork and direct communication. This can result in delayed responses, difficulty tracking complaints and a lack of transparency.
 
-### 👨‍🎓 Student
+CampusCare addresses these challenges through a centralized web-based complaint management platform.
+
+## 💡 3. Proposed Solution
+
+CampusCare provides:
+
+* Digital complaint registration.
+* Role-based access for different users.
+* Complaint categorization and priority recommendations.
+* Department and staff assignment.
+* Real-time complaint status tracking.
+* Complaint history and resolution remarks.
+* Feedback collection.
+* Administrative analytics and CSV reports.
+* SLA-based overdue complaint identification.
+
+## ✨ 4. Key Features
+
+### 👨‍🎓 Student Module
 
 * Student registration and login.
-* Submit campus complaints.
-* View submitted complaints.
+* Submit campus-related complaints.
+* Select complaint categories and priorities.
+* Provide campus location details.
 * Track complaint status.
-* Provide feedback.
+* View complaint history.
+* Submit feedback after resolution.
 
-### 👩‍🏫 Faculty
+### 👩‍🏫 Faculty Module
 
 * Faculty registration.
-* Administrator approval before account access.
-* Access the platform after approval.
+* Administrator approval workflow.
+* Secure login after approval.
+* Complaint registration and tracking.
 
-### 🧑‍🔧 Staff
+### 🧑‍🔧 Staff Module
 
-* Staff registration.
-* Administrator approval.
+* Administrator-provisioned staff accounts.
 * View assigned complaints.
-* Update complaint progress and status.
+* Update complaint status.
+* Add resolution remarks.
+* Maintain complaint progress.
 
-### 👨‍💼 Administrator
+### 👨‍💼 Administrator Module
 
-* First administrator account setup.
 * Manage registered users.
-* Approve or reject faculty and staff accounts.
-* Enable or disable user accounts.
-* View and assign complaints to staff.
-* Manage campus departments.
-* View complaint statistics and reports.
+* Approve faculty accounts.
+* Provision staff accounts.
+* Assign complaints to staff and departments.
+* Monitor complaint progress.
+* View dashboard analytics.
+* Identify overdue complaints.
+* Export complaint reports in CSV format.
 
-## 🛠️ Technologies Used
+### 🤖 AI-Supported Complaint Recommendations
 
-| Component             | Technology                  |
-| --------------------- | --------------------------- |
-| Frontend              | React.js                    |
-| Build Tool            | Vite                        |
-| Programming Languages | JavaScript, Java            |
-| Backend               | Spring Boot                 |
-| Database              | MySQL 8                     |
-| ORM                   | Spring Data JPA / Hibernate |
-| Security              | BCrypt Password Hashing     |
-| API                   | REST API                    |
-| Development IDE       | Visual Studio Code          |
-| API Testing           | Postman                     |
-| Database Tool         | MySQL Workbench             |
-| Version Control       | Git & GitHub                |
+The optional Python FastAPI service provides rule-based recommendations for:
 
-## 🏗️ System Architecture
+* Complaint category.
+* Complaint priority.
+* Responsible department.
+
+If the AI service is unavailable, the Java backend includes a deterministic fallback classification mechanism.
+
+## 🛠️ 5. Technology Stack
+
+| Layer                 | Technologies                      |
+| --------------------- | --------------------------------- |
+| Frontend              | React.js, JavaScript              |
+| Build Tool            | Vite                              |
+| UI Icons              | Lucide React                      |
+| Charts                | Recharts                          |
+| API Communication     | Axios                             |
+| Backend               | Java 21, Spring Boot 3.4.5        |
+| Backend Security      | Spring Security                   |
+| Authentication        | JWT                               |
+| Password Security     | BCrypt                            |
+| ORM                   | Spring Data JPA, Hibernate        |
+| Database              | MySQL 8                           |
+| Supporting AI Service | Python, FastAPI                   |
+| API Documentation     | Swagger / OpenAPI                 |
+| Version Control       | Git, GitHub                       |
+| Development Tools     | VS Code, MySQL Workbench, Postman |
+
+## 🏗️ 6. System Architecture
 
 ```text
                  CAMPUSCARE
                       |
           +-----------+-----------+
           |                       |
-      FRONTEND                 BACKEND
+       FRONTEND                BACKEND
           |                       |
-     React + Vite             Spring Boot
+     React + Vite           Java + Spring Boot
           |                       |
-          +------ REST APIs ------+
-                      |
-                  MySQL DB
-                      |
-          +-----------+-----------+
-          |           |           |
-        Users     Complaints   Departments
-                      |
-                   Feedback
+          |                  REST APIs
+          |                       |
+          |                JWT Authentication
+          |                       |
+          |                 Spring Data JPA
+          |                       |
+          |                  MySQL 8
+          |
 ```
-
-## 📂 Project Structure
-
-```text
-Hackathon_CampusCare/
-│
-├── backend/
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/com/campuscare/
-│   │       │   ├── config/
-│   │       │   ├── controller/
-│   │       │   ├── model/
-│   │       │   ├── repo/
-│   │       │   └── security/
-│   │       │
-│   │       └── resources/
-│   │           └── application.properties
-│   │
-│   └── pom.xml
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── context/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── App.jsx
-│   │   ├── main.jsx
-│   │   └── style.css
-│   │
-│   ├── package.json
-│   └── vite.config.js
-│
-├── database/
-│   └── schema.sql
-│
-├── start-backend.bat
-├── start-frontend.bat
-└── README.md
-```
-
-## ⚙️ Installation & Setup
-
-### 1. Prerequisites
-
-Install the following:
-
-* Java 21
-* Apache Maven
-* Node.js and npm
-* MySQL 8
-* Visual Studio Code
-
-### 2. Clone the Repository
-
-```bash
-git clone https://github.com/Jhanasri-thota/DBS-DS_PROJECT.git
-```
-
-Navigate to the project directory:
-
-```bash
-cd DBS-DS_PROJECT/Hackathon_CampusCare
-```
-
-### 3. Database Setup
-
-1. Open MySQL Workbench.
-2. Open `database/schema.sql`.
-3. Execute the SQL script.
-4. Open the backend configuration file:
-
-```text
-backend/src/main/resources/application.properties
-```
-
-Configure your MySQL username and password.
-
-### 4. Start the Backend
-
-Open a terminal:
-
-```bash
-cd backend
-mvn clean spring-boot:run
-```
-
-Backend runs at:
-
-```text
-http://localhost:8080
-```
-
-### 5. Start the Frontend
-
-Open another terminal:
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Open the frontend URL displayed in the terminal. The default Vite URL is:
-
-```text
-http://localhost:5173
-```
-
-### 6. Administrator Setup
-
-Open:
-
-```text
-http://localhost:5173/setup-admin
-```
-
-Create the first administrator account. After setup, log in and manage campus users and complaints.
-
-## 🔄 Application Workflow
-
-```text
-          User Registration
-                 |
-          +------+------+
-          |             |
-        Student      Faculty/Staff
-          |             |
-     Auto Approval   Admin Approval
-          |             |
-          +------+------+
-                 |
-               Login
-                 |
-          Submit Complaint
-                 |
-          Admin Assigns Staff
-                 |
-          Staff Updates Status
-                 |
-          Complaint Resolution
-                 |
-             Feedback
-```
-
-## 🔮 Future Enhancements
-
-* Email and SMS notifications.
-* Complaint history and detailed tracking.
-* Advanced analytics dashboard.
-* Mobile-friendly application improvements.
-* Complaint priority management.
-* More detailed administrative reports.
-
-## 👥 Team Members
-
-This project is developed collaboratively by:
-
-| S. No. | Team Member  | University ID |
-| :----: | ------------ | :-----------: |
-|    1   | **Jhanasri** |   2520090121  |
-|    2   | **Sindhuja** |   2520080045  |
-|    3   | **Alekhya**  |   2520090126  |
-
-## 🎓 Project Information
-
-| Detail         | Description                           |
-| -------------- | ------------------------------------- |
-| Project Name   | CampusCare                            |
-| Project Type   | Full-Stack Web Application            |
-| Domain         | Campus Complaint & Service Management |
-| Frontend       | React + Vite                          |
-| Backend        | Java + Spring Boot                    |
-| Database       | MySQL                                 |
-| Repository     | DBS-DS_PROJECT                        |
-| Project Folder | Hackathon_CampusCare                  |
-
-## ❤️ Our Vision
-
-We aim to make campus issue management more accessible, transparent and efficient through technology.
-
-**CampusCare – Your Campus, Your Voice, Our Responsibility!**
-
----
-
-<p align="center">
-  <b>Developed with ❤️ by Team CampusCare</b>
-</p>
