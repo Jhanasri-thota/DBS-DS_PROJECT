@@ -1,42 +1,63 @@
-# 🏫 CampusCare – AI-Powered Campus Complaint & Service Management System
+# 🏫 CampusCare
+
+### AI-Powered Campus Complaint & Service Management System
 
 <p align="center">
   <b>One Platform. Every Campus Concern. Better Campus Life.</b>
-  <br><br>
-  A Full-Stack Web Application developed for CODESPARK Hackathon 2026 – Problem Statement 20.
+  <br>
+  A Smart Digital Solution for Efficient Campus Complaint Management
 </p>
 
 ---
 
 ## 📌 1. Project Overview
 
-**CampusCare** is an AI-powered Campus Complaint and Service Management System designed to make campus issue reporting, tracking and resolution easier and more efficient.
+**CampusCare** is a full-stack, AI-supported Campus Complaint and Service Management System developed to simplify communication between students, faculty, administrators and campus maintenance staff.
 
-The platform provides a centralized digital environment where students and faculty can register complaints related to campus facilities and services. Administrators can manage users, assign complaints to staff members, monitor progress and analyze complaint statistics.
+In traditional campus environments, reporting and resolving issues can be time-consuming due to manual complaint registration, delayed communication and the lack of proper tracking.
 
-The system also includes an optional AI-supported service that recommends complaint categories, priorities and departments based on the complaint description.
+CampusCare addresses these challenges by providing a centralized web application where users can submit complaints, track their progress and receive updates until resolution.
 
-Our goal is to improve communication, transparency and accountability in campus maintenance and service management.
+The platform also provides administrators with tools to manage users, assign complaints, monitor service activities and analyze complaint statistics.
 
-## 🎯 2. Problem Statement
+An optional AI-support service recommends complaint categories, priorities and responsible departments based on complaint descriptions.
 
-Traditional campus complaint management often depends on manual reporting, paperwork and direct communication. This can result in delayed responses, difficulty tracking complaints and a lack of transparency.
+### 🎯 Our Mission
 
-CampusCare addresses these challenges through a centralized web-based complaint management platform.
+To make campus complaint management more accessible, transparent, organized and efficient through technology.
 
-## 💡 3. Proposed Solution
+---
 
-CampusCare provides:
+## 🚨 2. Problem Statement
 
-* Digital complaint registration.
-* Role-based access for different users.
-* Complaint categorization and priority recommendations.
-* Department and staff assignment.
-* Real-time complaint status tracking.
-* Complaint history and resolution remarks.
-* Feedback collection.
-* Administrative analytics and CSV reports.
-* SLA-based overdue complaint identification.
+Traditional campus complaint management systems often face challenges such as:
+
+* Manual complaint registration.
+* Delays in resolving campus issues.
+* Difficulty tracking complaint status.
+* Lack of communication between users and maintenance teams.
+* Improper complaint assignment.
+* Limited administrative monitoring.
+* Lack of centralized complaint records.
+
+### 💡 Our Solution
+
+CampusCare introduces a centralized digital platform that enables users to report issues, allows administrators to assign responsibilities and helps staff manage complaints efficiently.
+
+---
+
+## 🎯 3. Project Objectives
+
+* Develop a centralized campus complaint management platform.
+* Simplify complaint registration and tracking.
+* Provide role-based access for different campus users.
+* Improve coordination between administrators and staff.
+* Support complaint categorization and priority recommendations.
+* Maintain complaint history and resolution details.
+* Provide administrative dashboards and reports.
+* Improve transparency and accountability in campus services.
+
+---
 
 ## ✨ 4. Key Features
 
@@ -44,85 +65,171 @@ CampusCare provides:
 
 * Student registration and login.
 * Submit campus-related complaints.
-* Select complaint categories and priorities.
-* Provide campus location details.
+* Select complaint categories.
+* Provide building, floor and room details.
+* View submitted complaints.
 * Track complaint status.
-* View complaint history.
-* Submit feedback after resolution.
+* View complaint details and history.
+* Submit feedback after complaint resolution.
 
 ### 👩‍🏫 Faculty Module
 
 * Faculty registration.
 * Administrator approval workflow.
 * Secure login after approval.
-* Complaint registration and tracking.
+* Register campus-related complaints.
+* Track complaint progress.
 
 ### 🧑‍🔧 Staff Module
 
-* Administrator-provisioned staff accounts.
+* Staff account management.
 * View assigned complaints.
 * Update complaint status.
 * Add resolution remarks.
-* Maintain complaint progress.
+* Manage assigned complaint progress.
 
 ### 👨‍💼 Administrator Module
 
-* Manage registered users.
+* View registered users.
 * Approve faculty accounts.
-* Provision staff accounts.
-* Assign complaints to staff and departments.
+* Manage user access.
+* Assign complaints to staff.
 * Monitor complaint progress.
-* View dashboard analytics.
+* View complaint analytics.
 * Identify overdue complaints.
 * Export complaint reports in CSV format.
 
 ### 🤖 AI-Supported Complaint Recommendations
 
-The optional Python FastAPI service provides rule-based recommendations for:
+The optional AI service analyzes complaint descriptions and recommends:
 
 * Complaint category.
 * Complaint priority.
 * Responsible department.
 
-If the AI service is unavailable, the Java backend includes a deterministic fallback classification mechanism.
+The recommendation service uses a transparent, rule-based approach.
+
+If the AI service is unavailable, the Java backend provides a deterministic fallback classification mechanism.
+
+### 📊 Dashboard & Reporting
+
+* Complaint statistics.
+* Complaint status monitoring.
+* Overdue complaint identification.
+* Department-based complaint information.
+* CSV report export.
+
+---
 
 ## 🛠️ 5. Technology Stack
 
-| Layer                 | Technologies                      |
-| --------------------- | --------------------------------- |
-| Frontend              | React.js, JavaScript              |
-| Build Tool            | Vite                              |
-| UI Icons              | Lucide React                      |
-| Charts                | Recharts                          |
-| API Communication     | Axios                             |
-| Backend               | Java 21, Spring Boot 3.4.5        |
-| Backend Security      | Spring Security                   |
-| Authentication        | JWT                               |
-| Password Security     | BCrypt                            |
-| ORM                   | Spring Data JPA, Hibernate        |
-| Database              | MySQL 8                           |
-| Supporting AI Service | Python, FastAPI                   |
-| API Documentation     | Swagger / OpenAPI                 |
-| Version Control       | Git, GitHub                       |
-| Development Tools     | VS Code, MySQL Workbench, Postman |
+| Component             | Technology         |
+| --------------------- | ------------------ |
+| Frontend              | React.js           |
+| Build Tool            | Vite               |
+| Programming Language  | JavaScript         |
+| UI Icons              | Lucide React       |
+| Charts                | Recharts           |
+| API Communication     | Axios              |
+| Backend               | Java 21            |
+| Backend Framework     | Spring Boot 3.4.5  |
+| Security              | Spring Security    |
+| Authentication        | JWT                |
+| Password Encryption   | BCrypt             |
+| ORM                   | Spring Data JPA    |
+| Database              | MySQL 8            |
+| Supporting AI Service | Python + FastAPI   |
+| API Documentation     | Swagger / OpenAPI  |
+| Version Control       | Git & GitHub       |
+| Code Editor           | Visual Studio Code |
+| API Testing           | Postman            |
+| Database Management   | MySQL Workbench    |
+
+**Architecture Note:** Java Spring Boot is the primary application backend. Python FastAPI is an optional supporting service for complaint recommendations.
+
+---
 
 ## 🏗️ 6. System Architecture
 
 ```text
-                 CAMPUSCARE
-                      |
-          +-----------+-----------+
-          |                       |
-       FRONTEND                BACKEND
-          |                       |
-     React + Vite           Java + Spring Boot
-          |                       |
-          |                  REST APIs
-          |                       |
-          |                JWT Authentication
-          |                       |
-          |                 Spring Data JPA
-          |                       |
-          |                  MySQL 8
-          |
+                  CAMPUSCARE
+                       |
+             +---------+---------+
+             |                   |
+          FRONTEND             BACKEND
+             |                   |
+         React.js            Java 21
+           Vite             Spring Boot
+             |                   |
+             |              REST APIs
+             |                   |
+             |           Spring Security
+             |                   |
+             |             JWT Auth
+             |                   |
+             |             Spring Data JPA
+             |                   |
+             |                MySQL
+             |
+             |
+       Optional AI Service
+             |
+          FastAPI
+             |
+      Complaint Description
+             |
+     Category Recommendation
+     Priority Recommendation
+     Department Recommendation
+```
+
+---
+
+## 🔄 7. Application Workflow
+
+```text
+             USER REGISTRATION
+                     |
+                 USER LOGIN
+                     |
+             SUBMIT COMPLAINT
+                     |
+          AI-BASED RECOMMENDATIONS
+                     |
+             COMPLAINT CREATED
+                     |
+              ADMIN REVIEWS
+                     |
+             STAFF ASSIGNMENT
+                     |
+             STAFF UPDATES
+                     |
+            COMPLAINT RESOLUTION
+                     |
+               USER FEEDBACK
+                     |
+              COMPLAINT CLOSED
+```
+
+---
+
+## 📂 8. Project Folder Structure
+
+```text
+Hackathon_CampusCare/
+│
+├── backend/
+│   │
+│   ├── src/main/java/com/campuscare/
+│   │   │
+│   │   ├── controller/
+│   │   │   ├── AuthController.java
+│   │   │   ├── AdminController.java
+│   │   │   ├── ComplaintController.java
+│   │   │   ├── MetaController.java
+│   │   │   └── GlobalExceptionHandler.java
+│   │   │
+│   │   ├── model/
+│   │   │   ├── User.java
+│
 ```
