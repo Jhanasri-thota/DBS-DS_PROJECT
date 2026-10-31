@@ -1,0 +1,1 @@
+Run schema.sql in MySQL Workbench. Spring Boot JPA creates/updates the app_users and complaints tables.
