@@ -1,1 +1,0 @@
-CREATE DATABASE IF NOT EXISTS campuscure;\nUSE campuscure;\n-- Spring Boot creates app_users and complaints tables automatically.\n
